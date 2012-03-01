@@ -130,17 +130,10 @@ class PostalCodeLookup
         $places = array();
         foreach ($result->postalcodes as $placeData) {
             $place = new Place();
-            $place->adminCode1 = $placeData->adminCode1;
-            $place->adminCode2 = $placeData->adminCode2;
-            $place->adminCode3 = $placeData->adminCode3;
-            $place->adminName1 = $placeData->adminName1;
-            $place->adminName2 = $placeData->adminName2;
-            $place->adminName3 = $placeData->adminName3;
-            $place->postalcode = $placeData->postalcode;
-            $place->countryCode = $placeData->countryCode;
-            $place->placeName = $placeData->placeName;
-            $place->lat = $placeData->lat;
-            $place->lng = $placeData->lng;
+            foreach (array('adminCode3', 'adminName2', 'adminName3', 'adminCode2', 'postalcode', 'adminCode1', 'countryCode', 'lng', 'placeName', 'lat', 'adminName1') as $attr) {
+                // $this->assertAttributeNotEmpty($attr, $place);
+                if (property_exists($placeData, $attr)) $place->$attr = $placeData->$attr;
+            }
             $places[] = $place;
         }
         return $places;
