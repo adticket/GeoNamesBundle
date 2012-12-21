@@ -6,5 +6,8 @@
     "require": {
         "php": ">=5.3.2"
     },
-    "target-dir": "Adticket/GeoNamesBundle"
+    "target-dir": "Adticket/GeoNamesBundle",
+    "autoload": {
+        "psr-0": { "Adticket\\GeoNamesBundle": "" }
+    }
 }
