@@ -1,0 +1,10 @@
+{
+    "name": "adticket/geo-names-bundle",
+    "description": "Symfony2 bundle for tapping the GeoNames.org API",
+    "type": "library",
+    "homepage": "https://github.com/adticket/GeoNamesBundle",
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "target-dir": "Adticket/GeoNamesBundle"
+}

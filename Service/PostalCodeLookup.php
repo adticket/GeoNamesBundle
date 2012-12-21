@@ -45,11 +45,11 @@
  * @category Service
  */
 
-namespace Adticket\Sf2BundleOS\GeoNamesBundle\Service;
+namespace Adticket\GeoNamesBundle\Service;
 
-use Adticket\Sf2BundleOS\GeoNamesBundle\Entity\Place;
-use Adticket\Sf2BundleOS\GeoNamesBundle\Exception\Exception;
-use Adticket\Sf2BundleOS\GeoNamesBundle\Exception\ApiException;
+use Adticket\GeoNamesBundle\Entity\Place;
+use Adticket\GeoNamesBundle\Exception\Exception;
+use Adticket\GeoNamesBundle\Exception\ApiException;
 
 /**
  * Implements the GeoNames interface postalCodeLookup.
@@ -89,7 +89,7 @@ class PostalCodeLookup
      *
      * @param string $postalcode
      * @param string $country Default is all countries.
-     * @return \Adticket\Sf2BundleOS\GeoNamesBundle\Entitiy\Place[]
+     * @return \Adticket\GeoNamesBundle\Entitiy\Place[]
      */
     public function lookupPostalcode($postalcode, $country = null)
     {
@@ -101,7 +101,7 @@ class PostalCodeLookup
      *
      * @param string $placename
      * @param string $country Default is all countries.
-     * @return \Adticket\Sf2BundleOS\GeoNamesBundle\Entitiy\Place[]
+     * @return \Adticket\GeoNamesBundle\Entitiy\Place[]
      */
     public function lookupPlacename($placename, $country = null)
     {
@@ -110,7 +110,7 @@ class PostalCodeLookup
 
     /**
      * @param array Query parameter
-     * @return \Adticket\Sf2BundleOS\GeoNamesBundle\Entitiy\Place[]
+     * @return \Adticket\GeoNamesBundle\Entitiy\Place[]
      */
     protected function query(array $params)
     {

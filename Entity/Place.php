@@ -45,7 +45,7 @@
  * @category Entity
  */
 
-namespace Adticket\Sf2BundleOS\GeoNamesBundle\Entity;
+namespace Adticket\GeoNamesBundle\Entity;
 
 /**
  * A place in the GeoNames universe

@@ -45,7 +45,7 @@
  * @category Bundle
  */
 
-namespace Adticket\Sf2BundleOS\GeoNamesBundle;
+namespace Adticket\GeoNamesBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

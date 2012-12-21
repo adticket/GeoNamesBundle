@@ -45,7 +45,7 @@
  * @category DependencyInjection
  */
 
-namespace Adticket\Sf2BundleOS\GeoNamesBundle\DependencyInjection;
+namespace Adticket\GeoNamesBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
