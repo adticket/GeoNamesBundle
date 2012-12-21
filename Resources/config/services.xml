@@ -5,7 +5,7 @@
 
     <parameters>
         <parameter key="adticket.geonames.api.endpoint.postalcodelookup">http://api.geonames.org/postalCodeLookupJSON</parameter>
-        <parameter key="adticket.geonames.postalcodelookup.class">Adticket\Sf2BundleOS\GeoNamesBundle\Service\PostalCodeLookup</parameter>
+        <parameter key="adticket.geonames.postalcodelookup.class">Adticket\GeoNamesBundle\Service\PostalCodeLookup</parameter>
     </parameters>
 
     <services>

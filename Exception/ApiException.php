@@ -45,7 +45,7 @@
  * @category Exception
  */
 
-namespace Adticket\Sf2BundleOS\GeoNamesBundle\Exception;
+namespace Adticket\GeoNamesBundle\Exception;
 
 /**
  * Package exception class

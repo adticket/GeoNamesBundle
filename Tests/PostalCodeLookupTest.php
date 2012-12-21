@@ -50,8 +50,8 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'Entit
 require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'Exception' . DIRECTORY_SEPARATOR . 'Exception.php';
 require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'Exception' . DIRECTORY_SEPARATOR . 'ApiException.php';
 
-use Adticket\Sf2BundleOS\GeoNamesBundle\Service\PostalCodeLookup;
-use Adticket\Sf2BundleOS\GeoNamesBundle\Entity\Place;
+use Adticket\GeoNamesBundle\Service\PostalCodeLookup;
+use Adticket\GeoNamesBundle\Entity\Place;
 
 /**
  * Tests für das Backend
@@ -71,7 +71,7 @@ class PostalCodeLookupTest extends \PHPUnit_Framework_TestCase
         $result = $service->lookupPostalcode('63069', 'DE');
         $this->assertEquals(1, count($result));
         $place = array_shift($result);
-        $this->assertInstanceOf('\Adticket\Sf2BundleOS\GeoNamesBundle\Entity\Place', $place);
+        $this->assertInstanceOf('\Adticket\GeoNamesBundle\Entity\Place', $place);
         foreach (array('adminCode3', 'adminName2', 'adminName3', 'adminCode2', 'postalcode', 'adminCode1', 'countryCode', 'lng', 'placeName', 'lat', 'adminName1') as $attr) {
             $this->assertAttributeNotEmpty($attr, $place);
         }
@@ -87,7 +87,7 @@ class PostalCodeLookupTest extends \PHPUnit_Framework_TestCase
         $service = new PostalCodeLookup('http://api.geonames.org/postalCodeLookupJSON', $GLOBALS['apiusername']);
         $result = $service->lookupPlacename('Offenbach am Main', 'DE');
         $place = array_shift($result);
-        $this->assertInstanceOf('\Adticket\Sf2BundleOS\GeoNamesBundle\Entity\Place', $place);
+        $this->assertInstanceOf('\Adticket\GeoNamesBundle\Entity\Place', $place);
         foreach (array('adminCode3', 'adminName2', 'adminName3', 'adminCode2', 'postalcode', 'adminCode1', 'countryCode', 'lng', 'placeName', 'lat', 'adminName1') as $attr) {
             $this->assertAttributeNotEmpty($attr, $place);
         }
